@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <td>
+          <h1>用户名: {{ user.username }}</h1>
+         
+         {% if user == current_user %}
+             <p><a href="{{ url_for('edit_profile') }}">个人资料编辑</a></p>
+          {% endif %}
+</td>
+{% endblock %}
